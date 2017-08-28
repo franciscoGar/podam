@@ -12,19 +12,6 @@
 	<artifactId>podam</artifactId>
 	<version>7.1.1-SNAPSHOT</version>
 	<name>podam</name>
-
-	  <distributionManagement>
-	    <repository>
-	      <id>repo.eclipse.org</id>
-	      <name>Project Repository - Releases</name>
-	      <url>https://repo.eclipse.org/content/repositories/project-releases/</url>
-	    </repository>
-	    <snapshotRepository>
-	      <id>repo.eclipse.org</id>
-	      <name>Project Repository - Snapshots</name>
-	      <url>https://repo.eclipse.org/content/repositories/project-snapshots/</url>
-	    </snapshotRepository>
-	  </distributionManagement>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -441,6 +428,18 @@
 			<id>github-project-site</id>
 			<url>gitsite:git@github.com/devopsfolks/podam.git</url>
 		</site>
+		
+		
+	      <repository>
+	      <id>repo.eclipse.org</id>
+	      <name>Project Repository - Releases</name>
+	      <url>https://repo.eclipse.org/content/repositories/project-releases/</url>
+	      </repository>
+	      <snapshotRepository>
+	      <id>repo.eclipse.org</id>
+	      <name>Project Repository - Snapshots</name>
+	      <url>https://repo.eclipse.org/content/repositories/project-snapshots/</url>
+	      </snapshotRepository>
 	</distributionManagement>
 
 	<dependencies>
