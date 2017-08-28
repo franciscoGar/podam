@@ -13,6 +13,19 @@
 	<version>7.1.1-SNAPSHOT</version>
 	<name>podam</name>
 
+	  <distributionManagement>
+	    <repository>
+	      <id>repo.eclipse.org</id>
+	      <name>Project Repository - Releases</name>
+	      <url>https://repo.eclipse.org/content/repositories/project-releases/</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>repo.eclipse.org</id>
+	      <name>Project Repository - Snapshots</name>
+	      <url>https://repo.eclipse.org/content/repositories/project-snapshots/</url>
+	    </snapshotRepository>
+	  </distributionManagement>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<serenity.version>1.2.2</serenity.version>
@@ -436,8 +449,8 @@
 			<groupId>org.eclipse.mylyn.github</groupId>
 			<artifactId>org.eclipse.egit.github.core</artifactId>
 			<version>3.1.0.201310021548-r</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/src/org.eclipse.egit.github.core-3.1.0.201310021548-r.jar</systemPath>
+		<!--	<scope>system</scope>
+			<systemPath>${basedir}/src/org.eclipse.egit.github.core-3.1.0.201310021548-r.jar</systemPath> -->
 		</dependency>
 		
 		<dependency>
