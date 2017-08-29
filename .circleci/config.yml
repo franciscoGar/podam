@@ -19,7 +19,6 @@ jobs:
     environment:
       # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
-  test:
     steps:
       - checkout
             # Download and cache dependencies
@@ -39,12 +38,19 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-      
+ 
+   test:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:8-jdk
+    steps:
       # run tests!
-      - run: mvn integration-test       
+      - checkout
+      - run:
+          name: Test
+          command: mvn integration-test       
       
-  
-      # add this to save the results    
+        # add this to save the results    
       - run:
           name: Save test results 
           command: |
