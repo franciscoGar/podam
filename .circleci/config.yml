@@ -19,7 +19,7 @@ jobs:
     environment:
       # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
-    
+  test:
     steps:
       - checkout
             # Download and cache dependencies
@@ -32,6 +32,7 @@ jobs:
       #add this to overcome the missing file
       - run: mvn install:install-file -DgroupId=org.eclipse.mylyn.github -DartifactId=org.eclipse.egit.github.core -Dversion=3.1.0.201310021548-r -Dpackaging=jar -Dfile=./src/org.eclipse.egit.github.core-3.1.0.201310021548-r.jar
       
+      #comment the next line
       #- run: mvn dependency:go-offline
 
       - save_cache:
@@ -40,11 +41,9 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
       
       # run tests!
-      - run: mvn integration-test        
+      - run: mvn integration-test       
       
-      - run: 
-          name: list current dirs
-          command: ls -l  
+  
       # add this to save the results    
       - run:
           name: Save test results 
