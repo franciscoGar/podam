@@ -40,8 +40,7 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
       
         
-      # run tests!
-      - run: mvn integration-test
+    
       # add this to save the results    
       - run:
           name: Save test results 
@@ -53,3 +52,6 @@ jobs:
           path: ~/junit
       - store_artifacts:
           path: ~/junit  
+
+      # run tests!
+      - run: mvn integration-test
