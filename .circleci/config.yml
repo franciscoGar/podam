@@ -41,7 +41,7 @@ jobs:
       
       # run tests!
       - run: mvn integration-test        
-      - run: find `pwd` -name sure*  
+      - run: ls -l | grep "^d"  
       # add this to save the results    
       - run:
           name: Save test results 
