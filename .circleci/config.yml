@@ -41,9 +41,10 @@ jobs:
       
       # run tests!
       - run: mvn integration-test        
+      
       - run: 
           name: list current dirs
-          command: ls -l | grep "^d";  
+          command: ls -l  
       # add this to save the results    
       - run:
           name: Save test results 
