@@ -36,6 +36,11 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
+ #pre-dependencies         
+  dependencies:
+  pre:
+    - mvn install:install-file -DgroupId=org.eclipse.mylyn.github -DartifactId=org.eclipse.egit.github.core -Dversion=3.1.0.201310021548-r -Dpackaging=jar -Dfile=~/repo/podam/src/org.eclipse.egit.github.core-3.1.0.201310021548-r.jar
+
         
       # run tests!
       - run: mvn integration-test
