@@ -432,7 +432,6 @@
 	</distributionManagement>
 
 	<dependencies>
-		
 		<dependency>
 			<groupId>net.jcip</groupId>
 			<artifactId>jcip-annotations</artifactId>
